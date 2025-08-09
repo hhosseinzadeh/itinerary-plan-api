@@ -89,12 +89,13 @@ YOUR_FIREBASE_PROJECT_DATABASE.json is the same JSON file you downloaded from th
 6. Then, in the terminal, run the command: 
    ```bash
    wrangler deploy
-By running this command, Cloudflare will return a link similar to the following:
+ By running this command, Cloudflare will return a link similar to the following:
  https://itinerary-worker.h-hosseinzade1994.workers.dev
+ 
 7. Then, in Postman, enter the Cloudflare link and send a POST API request with the following body using the raw and JSON options.
-For example:
-    ```bash
-    {
+ For example:
+   ```bash
+   {
   "destination": "Yazd, IRAN",
   "durationDays": 3
-}
+  }
