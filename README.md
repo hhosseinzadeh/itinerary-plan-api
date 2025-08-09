@@ -95,7 +95,5 @@ YOUR_FIREBASE_PROJECT_DATABASE.json is the same JSON file you downloaded from th
 7. Then, in Postman, enter the Cloudflare link and send a POST API request with the following body using the raw and JSON options.
  For example:
    ```bash
-   {
-  "destination": "Yazd, IRAN",
-  "durationDays": 3
-  }
+   {"destination": "Yazd, IRAN", "durationDays": 3}
+  
