@@ -77,16 +77,16 @@ Now you have created your own worker inside Cloudflare.
 
 
 ## Usage
-1- Create an account in Firebase, then set up a Firestore database. Generate the environment JSON file in it, download it, and place it in your Python project directory.
-2- In the project configuration file, set the following parameters: 
+1. Create an account in Firebase, then set up a Firestore database. Generate the environment JSON file in it, download it, and place it in your Python project directory.
+2. In the project configuration file, set the following parameters: 
     NGROK_AUTH_TOKEN = "YOUR-NGROK-AUTH-TOKEN"  
     OPENAI_API_KEY = "YOUR-OPENAI-API-KEY"  
     FIREBASE_CRED_PATH = "YOUR_FIREBASE_PROJECT_DATABASE.json"  
 YOUR_FIREBASE_PROJECT_DATABASE.json is the same JSON file you downloaded from the Firebase console.
-3- Run the FastAPI app locally or deploy it to a server
-4- By running the API, replace the phrase "NGROK_URL" in the index.ts file with the link returned to you by ngrok.
-5- In the index.ts file, replace the placeholders "YOUR_FIREBASE_PROJECT_ID" and "FIRE_BASE_API_KEY" with your actual Firestore project ID and API key, which you can obtain from the Firebase console.
-6- Then, in the terminal, run the command: 
+3. Run the FastAPI app locally or deploy it to a server
+4. By running the API, replace the phrase "NGROK_URL" in the index.ts file with the link returned to you by ngrok.
+5. In the index.ts file, replace the placeholders "YOUR_FIREBASE_PROJECT_ID" and "FIRE_BASE_API_KEY" with your actual Firestore project ID and API key, which you can obtain from the Firebase console.
+6. Then, in the terminal, run the command: 
    ```bash
    wrangler deploy
 By running this command, Cloudflare will return a link similar to the following:
