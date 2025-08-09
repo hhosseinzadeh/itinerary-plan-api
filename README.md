@@ -65,7 +65,8 @@ To work with Cloudflare from your local system without the need for Node.js and 
   ```bash
   npm install -g wrangler
 
-then follow this commands:
+Then follow this commands:
+ 
   ```bash
   wrangler generate itinerary-worker
 
