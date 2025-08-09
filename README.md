@@ -9,12 +9,8 @@ A FastAPI-based service that generates detailed travel itineraries using OpenAI'
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Usage](#usage)
 
 ---
 
@@ -74,6 +70,17 @@ The workflow of the request from the user side, along with the data flow, proces
    wrangler publish
 
 Now you have created your own worker inside Cloudflare.
+
+
+## Configuration
+1. Set your OpenAI API key in the code or via environment variables.
+
+2. Provide the path to your Firebase admin SDK JSON credentials file.
+
+3. Add your Cloudflare Worker script and configure routes to proxy API requests.
+
+4. Set Ngrok token for local development tunneling.
+
 
 
 ## Usage
