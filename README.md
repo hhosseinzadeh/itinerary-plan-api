@@ -33,6 +33,12 @@ The workflow of the request from the user side, along with the data flow, proces
                                                          ↳ update Firestore (status: completed)
 ---
 
+## Architecture
+  requests quickly and efficiently at the edge, reducing latency for users worldwide. The Cloudflare Worker acts as a lightweight proxy that asynchronously forwards requests to the FastAPI backend, which is        responsible for the core AI processing.
+  The backend uses FastAPI due to its high performance and ease of asynchronous programming, which is essential for handling OpenAI API calls and Firestore database interactions concurrently. Firestore is used     as a scalable NoSQL database to store job statuses and generated itineraries.
+  For the prompt design, the goal was to generate a clean, structured JSON output without extraneous text. The prompt explicitly instructs the model to return only a JSON array formatted with specific keys (day,   theme, activities), each containing relevant details about the travel itinerary. This ensures easier parsing and direct insertion into the database.
+
+
 ## Features
 
 - Generate multi-day travel itineraries with themed daily activities  
