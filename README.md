@@ -7,7 +7,7 @@ A FastAPI-based service that generates detailed travel itineraries using OpenAI'
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Architecture choice](#Architecture choice)
+- [Architecture](#Architecture)
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
