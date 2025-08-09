@@ -96,8 +96,120 @@ YOUR_FIREBASE_PROJECT_DATABASE.json is the same JSON file you downloaded from th
  For example:
    ```bash
    {"destination": "Yazd, IRAN", "durationDays": 3}
-8. Here, the request is first sent to Cloudflare, and then the processing begins asynchronously.
+8. Here, the request is first sent to Cloudflare, and then the processing begins asynchronously and the first state of the data will be saved in firestore database with processing status.
  You will receive a response similar to the following:
    ```bash
    {"jobId": "d3aa0c18-9358-458c-adc2-0334181d4985", "message": "Job created successfully"}
+9. Now, this job ID is sent to FastAPI, leveraging Python's strong AI capabilities to process the request using the LLM module with prompt engineering.
+  Then, the data stored in the Firestore database is updated as follows:
 
+   ```json
+   [ {
+        "day": 1,
+        "theme": "Explore the Historical Depths",
+        "activities": [
+            {
+                "time": "09:00",
+                "description": "Visit the Jame Mosque of Yazd, known for its stunning tile work and impressive minarets.",
+                "location": "Jame Mosque of Yazd"
+            },
+            {
+                "time": "11:00",
+                "description": "Tour the Yazd Atash Behram, one of the oldest fire temples in the world.",
+                "location": "Yazd Atash Behram"
+            },
+            {
+                "time": "13:00",
+                "description": "Enjoy a traditional Persian lunch at a local restaurant.",
+                "location": "Local Restaurant"
+            },
+            {
+                "time": "15:00",
+                "description": "Explore the historic Fahadan neighborhood, wandering through winding alleys and admiring the architecture.",
+                "location": "Fahadan Neighborhood"
+            },
+            {
+                "time": "18:00",
+                "description": "Visit the Zoroastrian Towers of Silence for a glimpse into ancient burial practices.",
+                "location": "Towers of Silence"
+            },
+            {
+                "time": "20:00",
+                "description": "Dinner at a rooftop restaurant with views over Yazd's skyline.",
+                "location": "Rooftop Restaurant"
+            }
+        ]
+    },
+    {
+        "day": 2,
+        "theme": "Cultural Immersion and Local Craft",
+        "activities": [
+            {
+                "time": "09:00",
+                "description": "Visit the Yazd Water Museum to learn about traditional water management systems.",
+                "location": "Yazd Water Museum"
+            },
+            {
+                "time": "11:00",
+                "description": "Stop by the local Bazaar to shop for handicrafts, spices, and souvenirs.",
+                "location": "Yazd Bazaar"
+            },
+            {
+                "time": "13:00",
+                "description": "Have lunch at a restaurant that specializes in Yazdi desserts.",
+                "location": "Dessert Restaurant"
+            },
+            {
+                "time": "15:00",
+                "description": "Participate in a workshop to learn traditional carpet weaving techniques.",
+                "location": "Carpet Workshop"
+            },
+            {
+                "time": "18:00",
+                "description": "Attend a cultural performance showcasing local music and dance.",
+                "location": "Cultural Center"
+            },
+            {
+                "time": "20:00",
+                "description": "Dinner at a local eatery sampling Yazdi cuisine.",
+                "location": "Local Eatery"
+            }
+        ]
+    },
+    {
+        "day": 3,
+        "theme": "Adventure and Nature",
+        "activities": [
+            {
+                "time": "07:00",
+                "description": "Early morning departure for a day trip to the Dasht-e Kavir desert.",
+                "location": "Dasht-e Kavir"
+            },
+            {
+                "time": "09:00",
+                "description": "Explore the stunning landscapes, including sand dunes and salt flats.",
+                "location": "Desert Landscape"
+            },
+            {
+                "time": "12:00",
+                "description": "Picnic lunch in the desert, experiencing the tranquility of the surroundings.",
+                "location": "Desert Picnic Spot"
+            },
+            {
+                "time": "14:00",
+                "description": "Continue exploring and visiting local wildlife or rare flora.",
+                "location": "Desert Wildlife Spot"
+            },
+            {
+                "time": "17:00",
+                "description": "Return to Yazd and relax at a traditional caravanserai.",
+                "location": "Traditional Caravanserai"
+            },
+            {
+                "time": "19:00",
+                "description": "Farewell dinner featuring delightful local dishes.",
+                "location": "Farewell Restaurant"
+            }
+        ]
+    }
+]
