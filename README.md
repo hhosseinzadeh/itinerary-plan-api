@@ -64,14 +64,7 @@ The workflow of the request from the user side, along with the data flow, proces
   
   ```bash
   npm install -g wrangler
-
-4. Then follow this commands:
  
-  ```bash
-  wrangler generate itinerary-worker
-
-
-## Usage 
 
 
 
