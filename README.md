@@ -26,6 +26,14 @@ To ensure high availability, low latency, and enhanced security, Cloudflare Work
 
 The goal is to provide an automated, AI-powered backend for travel planning applications with a scalable, globally distributed infrastructure.
 
+
+The workflow of the request from the user side, along with the data flow, processing, and storage, is as follows:
+
+
+[User] → POST → [Cloudflare Worker] 
+                        ↳ creates jobId + Firestore doc (status: processing)
+                        ↳ POST to Ngrok/FastAPI server → LLM call
+                                                         ↳ update Firestore (status: completed)
 ---
 
 ## Features
