@@ -60,12 +60,12 @@ The workflow of the request from the user side, along with the data flow, proces
    ```bash
    pip install -r requirements.txt
 
-To work with Cloudflare from your local system without the need for Node.js and npm installed, then need to install wrangler by running the following commands:
+3. To work with Cloudflare from your local system without the need for Node.js and npm installed, then need to install wrangler by running the following commands:
   
   ```bash
   npm install -g wrangler
 
-Then follow this commands:
+4. Then follow this commands:
  
   ```bash
   wrangler generate itinerary-worker
