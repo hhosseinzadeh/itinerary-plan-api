@@ -96,4 +96,8 @@ YOUR_FIREBASE_PROJECT_DATABASE.json is the same JSON file you downloaded from th
  For example:
    ```bash
    {"destination": "Yazd, IRAN", "durationDays": 3}
-  
+8. Here, the request is first sent to Cloudflare, and then the processing begins asynchronously.
+ You will receive a response similar to the following:
+   ```bash
+   {"jobId": "d3aa0c18-9358-458c-adc2-0334181d4985", "message": "Job created successfully"}
+
